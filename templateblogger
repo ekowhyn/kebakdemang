@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website RT 03 / RW 07 Kebakdemang</title>
+    
+    <!-- Memuat Tailwind CSS untuk styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Memuat Font dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ikon dari Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* bg-slate-100 */
+        }
+        /* Style untuk transisi halaman */
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        /* Animasi sederhana */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .active {
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        /* Animasi untuk slider banner */
+        @keyframes slideFade {
+            0%, 100% { opacity: 0; transform: translateY(15px); }
+            10%, 90% { opacity: 1; transform: translateY(0); }
+        }
+        #slider-content p {
+            animation: slideFade 10s ease-in-out infinite;
+            position: absolute; /* Memastikan teks tidak menggeser layout */
+            width: 100%;
+            left:0;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <div id="app" class="max-w-lg mx-auto min-h-screen bg-slate-100 shadow-2xl shadow-slate-300">
+
+        <!-- Header Utama (Tema Hitam/Abu Gelap) -->
+        <header class="bg-gray-900 text-white sticky top-0 z-20 shadow-lg">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <button id="back-button" class="hidden p-2">
+                    <i class="ph ph-arrow-left text-2xl"></i>
+                </button>
+                <div id="header-title" class="text-center w-full">
+                    <h1 class="text-xl font-bold">Kabakdemang RT 3 RW 7</h1>
+                    <p class="text-xs text-gray-400">Desa Kemiri Kecamatan Kebakkramat Kabupaten Karanganyar</p>
+                </div>
+                 <div class="w-10"></div> <!-- Spacer -->
+            </div>
+        </header>
+
+        <!-- Halaman Utama (Home Screen) -->
+        <main id="home-screen" class="page active p-4 space-y-6">
+            
+            <!-- Banner Informasi Slider -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center text-center h-28 relative overflow-hidden">
+                <div id="slider-content" class="w-full h-full flex items-center justify-center">
+                    <!-- Konten slider akan diisi oleh JavaScript -->
+                </div>
+            </div>
+
+            <!-- Menu Navigasi Grid (Tema Hitam/Abu) -->
+            <div class="grid grid-cols-4 gap-4 text-center">
+                 <!-- Menu items akan ditambahkan oleh JS -->
+            </div>
+        </main>
+
+        <!-- Kontainer untuk Halaman Konten Lainnya (Tema Hitam/Abu) -->
+        <div id="content-pages" class="p-4">
+            <!-- Setiap section di bawah ini adalah halaman terpisah -->
+
+            <!-- SECTION: Pengurus -->
+            <section id="pengurus" class="page bg-white p-6 rounded-2xl shadow-lg">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900 border-b-2 border-gray-200 pb-2">Struktur Pengurus RT 03</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 text-center">
+                        <img src="https://placehold.co/150x150/e2e8f0/334155?text=Foto" class="w-20 h-20 rounded-full mx-auto mb-2" alt="[Foto Pengurus]">
+                        <h3 class="font-bold text-md">Bapak Budi Santoso</h3>
+                        <p class="text-gray-800 font-semibold text-sm">Ketua RT</p>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 text-center">
+                        <img src="https://placehold.co/150x150/e2e8f0/334155?text=Foto" class="w-20 h-20 rounded-full mx-auto mb-2" alt="[Foto Pengurus]">
+                        <h3 class="font-bold text-md">Bapak Agus Wibowo</h3>
+                        <p class="text-slate-600 text-sm">Wakil Ketua RT</p>
+                    </div>
+                    <!-- ... pengurus lainnya ... -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 text-center">
+                        <img src="https://placehold.co/150x150/e2e8f0/334155?text=Foto" class="w-20 h-20 rounded-full mx-auto mb-2" alt="[Foto Pengurus]">
+                        <h3 class="font-bold text-md">Ibu Siti Aminah</h3>
+                        <p class="text-slate-600 text-sm">Sekretaris</p>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 text-center">
+                        <img src="https://placehold.co/150x150/e2e8f0/334155?text=Foto" class="w-20 h-20 rounded-full mx-auto mb-2" alt="[Foto Pengurus]">
+                        <h3 class="font-bold text-md">Ibu Rina Astuti</h3>
+                        <p class="text-slate-600 text-sm">Bendahara</p>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 text-center">
+                        <img src="https://placehold.co/150x150/e2e8f0/334155?text=Foto" class="w-20 h-20 rounded-full mx-auto mb-2" alt="[Foto Pengurus]">
+                        <h3 class="font-bold text-md">Bapak Joko Susilo</h3>
+                        <p class="text-slate-600 text-sm">Seksi Keamanan</p>
+                    </div>
+                     <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 text-center">
+                        <img src="https://placehold.co/150x150/e2e8f0/334155?text=Foto" class="w-20 h-20 rounded-full mx-auto mb-2" alt="[Foto Pengurus]">
+                        <h3 class="font-bold text-md">Ibu Endang Lestari</h3>
+                        <p class="text-slate-600 text-sm">Seksi PKK</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SECTION: Notulen -->
+            <section id="notulen" class="page bg-white p-6 rounded-2xl shadow-lg">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900 border-b-2 border-gray-200 pb-2">Arsip Notulen Rapat</h2>
+                <div class="space-y-4">
+                    <div class="border p-4 rounded-lg bg-slate-50">
+                        <h3 class="font-semibold">Rapat Rutin - Juni 2025</h3>
+                        <p class="text-sm text-slate-500">15 Juni 2025</p>
+                        <p class="mt-2 text-slate-700 text-sm">Membahas persiapan kegiatan 17 Agustus dan evaluasi program kerja bakti.</p>
+                        <a href="#" class="text-gray-800 hover:underline mt-2 inline-block text-sm">Baca / Unduh PDF</a>
+                    </div>
+                    <div class="border p-4 rounded-lg bg-slate-50">
+                        <h3 class="font-semibold">Rapat Koordinasi Keamanan - Mei 2025</h3>
+                        <p class="text-sm text-slate-500">20 Mei 2025</p>
+                        <p class="mt-2 text-slate-700 text-sm">Pembahasan jadwal siskamling dan penambahan penerangan jalan.</p>
+                        <a href="#" class="text-gray-800 hover:underline mt-2 inline-block text-sm">Baca / Unduh PDF</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SECTION: AD/ART -->
+            <section id="adart" class="page bg-white p-6 rounded-2xl shadow-lg">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900 border-b-2 border-gray-200 pb-2">AD/ART & Peraturan</h2>
+                <div class="space-y-3">
+                    <div class="accordion-item border rounded-lg">
+                        <button class="accordion-header w-full text-left font-semibold p-3 bg-slate-100 hover:bg-slate-200 rounded-t-lg flex justify-between items-center">Anggaran Dasar (AD)<i class="ph ph-caret-down"></i></button>
+                        <div class="accordion-content hidden p-3 text-sm"><p>Isi Anggaran Dasar RT 03...</p><a href="#" class="text-gray-800 hover:underline mt-2 inline-block">Unduh AD.pdf</a></div>
+                    </div>
+                    <div class="accordion-item border rounded-lg">
+                        <button class="accordion-header w-full text-left font-semibold p-3 bg-slate-100 hover:bg-slate-200 rounded-t-lg flex justify-between items-center">Anggaran Rumah Tangga (ART)<i class="ph ph-caret-down"></i></button>
+                        <div class="accordion-content hidden p-3 text-sm"><p>Isi Anggaran Rumah Tangga RT 03...</p><a href="#" class="text-gray-800 hover:underline mt-2 inline-block">Unduh ART.pdf</a></div>
+                    </div>
+                    <div class="accordion-item border rounded-lg">
+                        <button class="accordion-header w-full text-left font-semibold p-3 bg-slate-100 hover:bg-slate-200 rounded-t-lg flex justify-between items-center">Peraturan Warga<i class="ph ph-caret-down"></i></button>
+                        <div class="accordion-content hidden p-3"><ul class="list-disc list-inside space-y-1 text-sm"><li>Wajib lapor 1x24 jam bagi tamu menginap.</li><li>Iuran kas Rp 25.000,-/bulan.</li></ul></div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SECTION: Kas RT -->
+            <section id="kas" class="page bg-white p-6 rounded-2xl shadow-lg">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900 border-b-2 border-gray-200 pb-2">Laporan Kas RT 03</h2>
+                <div class="mb-4 bg-gray-100 border-l-4 border-gray-500 text-gray-800 p-3 rounded-lg"><p class="font-bold">Saldo Kas: <span class="text-lg">Rp 2.550.000,-</span></p></div>
+                <div class="overflow-x-auto"><table class="w-full text-xs text-left">
+                    <thead class="text-slate-700 uppercase bg-slate-100"><tr><th class="px-4 py-2">Tanggal</th><th class="px-4 py-2">Keterangan</th><th class="px-4 py-2 text-right">Debit</th><th class="px-4 py-2 text-right">Kredit</th></tr></thead>
+                    <tbody>
+                        <tr class="border-b"><td class="px-4 py-2">05/05</td><td class="px-4 py-2">Iuran Warga</td><td class="px-4 py-2 text-right text-green-600">1jt</td><td class="px-4 py-2 text-right">-</td></tr>
+                        <tr class="bg-slate-50 border-b"><td class="px-4 py-2">15/05</td><td class="px-4 py-2">Beli Lampu</td><td class="px-4 py-2 text-right">-</td><td class="px-4 py-2 text-right text-red-600">150k</td></tr>
+                        <tr class="border-b"><td class="px-4 py-2">25/05</td><td class="px-4 py-2">Fotokopi</td><td class="px-4 py-2 text-right">-</td><td class="px-4 py-2 text-right text-red-600">50k</td></tr>
+                    </tbody>
+                </table></div>
+            </section>
+
+            <!-- SECTION: Pengumuman -->
+            <section id="pengumuman" class="page bg-white p-6 rounded-2xl shadow-lg">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900 border-b-2 border-gray-200 pb-2">Pengumuman</h2>
+                 <div class="space-y-4">
+                    <div class="border-l-4 border-yellow-500 bg-yellow-50 p-3 rounded-r-lg">
+                        <h3 class="font-semibold text-yellow-800">Kerja Bakti Massal</h3>
+                        <p class="text-xs text-yellow-600">Diposting: 25 Juni 2025</p>
+                        <p class="mt-1 text-yellow-700 text-sm">Diberitahukan kepada seluruh warga RT 03 untuk mengikuti kerja bakti pada hari Minggu, 6 Juli 2025, pukul 07:00 WIB.</p>
+                    </div>
+                    <div class="border-l-4 border-green-500 bg-green-50 p-3 rounded-r-lg">
+                        <h3 class="font-semibold text-green-800">Penyaluran Bantuan Sosial</h3>
+                        <p class="text-xs text-green-600">Diposting: 20 Juni 2025</p>
+                        <p class="mt-1 text-green-700 text-sm">Penyaluran bantuan sosial akan dilaksanakan pada hari Sabtu, 28 Juni 2025 di Balai Desa.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: Kalender Acara -->
+            <section id="kalender" class="page bg-white p-6 rounded-2xl shadow-lg">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900 border-b-2 border-gray-200 pb-2">Kalender Acara</h2>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 p-3 border rounded-lg bg-slate-50">
+                        <div class="text-center bg-gray-800 text-white rounded-md p-2 w-16"><p class="text-xs">JUL</p><p class="font-bold text-xl">06</p></div>
+                        <div><h3 class="font-semibold">Kerja Bakti Massal</h3><p class="text-xs text-slate-500"><i class="ph ph-clock"></i> 07:00 WIB</p></div>
+                    </div>
+                     <div class="flex items-center gap-3 p-3 border rounded-lg bg-slate-50">
+                        <div class="text-center bg-gray-800 text-white rounded-md p-2 w-16"><p class="text-xs">AGU</p><p class="font-bold text-xl">17</p></div>
+                        <div><h3 class="font-semibold">Lomba Kemerdekaan</h3><p class="text-xs text-slate-500"><i class="ph ph-clock"></i> 07:00 WIB</p></div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SECTION: Informasi RW -->
+            <section id="infow" class="page bg-white p-6 rounded-2xl shadow-lg">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900 border-b-2 border-gray-200 pb-2">Informasi RW 07</h2>
+                <p class="mb-4 text-slate-600 text-sm">RW 07 adalah lingkup yang menaungi beberapa RT...</p>
+                <div class="bg-slate-100 p-3 rounded-lg text-sm">
+                    <h4 class="font-semibold">Kontak Pengurus RW 07</h4>
+                    <p><strong>Ketua RW:</strong> Bapak Sutrisno</p>
+                    <p><strong>Sekretaris RW:</strong> Bapak Hermawan</p>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // === KONFIGURASI MENU & HALAMAN ===
+            const menuItems = [
+                { id: 'pengurus', title: 'Pengurus', icon: 'users-three' },
+                { id: 'pengumuman', title: 'Pengumuman', icon: 'megaphone' },
+                { id: 'kalender', title: 'Acara', icon: 'calendar-blank' },
+                { id: 'notulen', title: 'Notulen', icon: 'file-text' },
+                { id: 'adart', title: 'Peraturan', icon: 'scales' },
+                { id: 'kas', title: 'Kas RT', icon: 'wallet' },
+                { id: 'infow', title: 'Info RW', icon: 'info' },
+            ];
+            
+            const menuGrid = document.querySelector('#home-screen .grid');
+            const pages = document.querySelectorAll('.page');
+            const homeScreen = document.getElementById('home-screen');
+            const headerTitle = document.getElementById('header-title');
+            const backButton = document.getElementById('back-button');
+
+            // === LOGIKA BANNER SLIDER ===
+            const sliderContent = document.getElementById('slider-content');
+            const messages = [
+                "Selamat datang di situs RT 03 Dukuh Kebakdemang",
+                "Silahkan klik menu yang tersedia di bawah ini",
+                "Pengumuman: Warga wajib mengikuti jimpitan keliling"
+            ];
+            let currentMessageIndex = 0;
+
+            function updateSlider() {
+                if (!sliderContent) return;
+                
+                while (sliderContent.firstChild) {
+                    sliderContent.removeChild(sliderContent.firstChild);
+                }
+
+                const p = document.createElement('p');
+                p.className = 'text-lg font-semibold text-gray-900 px-4'; // Tema Hitam/Abu
+                p.textContent = messages[currentMessageIndex];
+                sliderContent.appendChild(p);
+
+                currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+            }
+            setInterval(updateSlider, 10000);
+            updateSlider();
+
+
+            // === GENERATE MENU IKON ===
+            menuItems.forEach(item => {
+                const menuEl = document.createElement('button');
+                menuEl.className = 'nav-link flex flex-col items-center justify-center p-2 space-y-2 bg-white rounded-2xl shadow-lg hover:bg-gray-100 transition-colors'; // Tema Hitam/Abu
+                menuEl.dataset.target = item.id;
+                menuEl.innerHTML = `
+                    <div class="bg-gray-200 text-gray-800 text-3xl p-3 rounded-full"> <!-- Tema Hitam/Abu -->
+                        <i class="ph-fill ph-${item.icon}"></i>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-600">${item.title}</span>
+                `;
+                menuGrid.appendChild(menuEl);
+            });
+
+            // === LOGIKA NAVIGASI HALAMAN ===
+            function showPage(pageId) {
+                const targetPage = document.getElementById(pageId);
+                const pageInfo = menuItems.find(item => item.id === pageId) || {title: 'Laporan Kas'};
+
+                pages.forEach(page => page.classList.remove('active'));
+                
+                if(targetPage) {
+                    targetPage.classList.add('active');
+                    homeScreen.classList.remove('active');
+                    backButton.classList.remove('hidden');
+                    headerTitle.innerHTML = `<h1 class="text-xl font-bold">${pageInfo.title}</h1>`;
+                }
+            }
+
+            function showHomeScreen() {
+                pages.forEach(page => page.classList.remove('active'));
+                homeScreen.classList.add('active');
+                backButton.classList.add('hidden');
+                headerTitle.innerHTML = `<h1 class="text-xl font-bold">Kabakdemang RT 3 RW 7</h1><p class="text-xs text-gray-400">Desa Kemiri Kecamatan Kebakkramat Kabupaten Karanganyar</p>`; // Header Tema Hitam/Abu
+            }
+
+            // Event listener untuk semua tombol navigasi
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.dataset.target;
+                    showPage(targetId);
+                });
+            });
+
+            // Event listener untuk tombol kembali
+            backButton.addEventListener('click', showHomeScreen);
+
+            // === LOGIKA ACCORDION (UNTUK AD/ART) ===
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('i');
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('ph-caret-down');
+                    icon.classList.toggle('ph-caret-up');
+                });
+            });
+            
+            // Inisialisasi: tampilkan halaman utama
+            showHomeScreen();
+        });
+    </script>
+</body>
+</html>
